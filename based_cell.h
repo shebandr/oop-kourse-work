@@ -12,11 +12,11 @@ class based_cell
 
   public:
     based_cell();
-    virtual virtual int get_id();
-    virtual virtual int get_x();
-    virtual virtual int get_y();
-    virtual virtual void set_id(int iidd);
-    virtual virtual void set_x(int xx);
-    virtual virtual void set_y(int yy);
-    virtual virtual void draw_cell(sf::RenderWindow *window);
+    int get_id();
+    int get_x();
+    int get_y();
+    void set_id(int iidd);
+    void set_x(int xx);
+    void set_y(int yy);
+    void draw_cell(sf::RenderWindow *window);
 };
