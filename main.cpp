@@ -12,6 +12,8 @@
 #include "ui.h"
 #include "mouse_ui.h"
 #include "based_cell.h"
+#include "based_factory.h"
+#include "coal_station.h"
 
 using namespace std;
 string *types_of_ground = new string[2];
@@ -45,10 +47,19 @@ int main()
             background_field[x][y].set_ground(types_of_ground[0]);
         }
     }
+    
+    based_factory** factory_field = new based_factory*[xF];
+    for (int i = 0; i < xF; i++) {
+        factory_field[i] = new based_factory[yF];
+
+    }
+
+
 
 
     while (window.isOpen())
     {
+
         sf::Event event;
         while (window.pollEvent(event))
         {
@@ -59,7 +70,7 @@ int main()
         {
             sf::Vector2i localPosition = sf::Mouse::getPosition(window);
 
-            mouse_ui(localPosition, background_field, &picked_category, &picked_building, types_of_ground);
+            mouse_ui(localPosition, background_field, &picked_category, &picked_building, types_of_ground, factory_field);
         }
         window.clear();
         for (int x = 0; x < xF; x++)
@@ -67,9 +78,13 @@ int main()
             for (int y = 0; y < yF; y++)
             {
                 background_field[x][y].draw_cell(&window);
+                if (factory_field[x][y].get_empty()) {
+                    factory_field[x][y].draw_cell(&window);
+                }
             }
         }
-        ui_draw(&window);
+        
+        ui_draw(&window, 100);
 
         window.display();
     }

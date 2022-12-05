@@ -369,6 +369,7 @@ copy /Y "$(SolutionDir)resources"  "$(TargetDir)resources\"</Command>
   <ItemGroup>
     <ClCompile Include="based_cell.cpp" />
     <ClCompile Include="based_factory.cpp" />
+    <ClCompile Include="coal_station.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="mouse_ui.cpp" />
     <ClCompile Include="ui.cpp" />
@@ -491,6 +492,7 @@ copy /Y "$(SolutionDir)resources"  "$(TargetDir)resources\"</Command>
   <ItemGroup>
     <ClInclude Include="based_cell.h" />
     <ClInclude Include="based_factory.h" />
+    <ClInclude Include="coal_station.h" />
     <ClInclude Include="extlibs\include\SFML\Audio.hpp" />
     <ClInclude Include="extlibs\include\SFML\Audio\AlResource.hpp" />
     <ClInclude Include="extlibs\include\SFML\Audio\Export.hpp" />
@@ -591,6 +593,14 @@ copy /Y "$(SolutionDir)resources"  "$(TargetDir)resources\"</Command>
     <ClInclude Include="extlibs\include\SFML\Window\WindowStyle.hpp" />
     <ClInclude Include="mouse_ui.h" />
     <ClInclude Include="ui.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="..\..\..\Pictures\рандомная хуйня\Новая папка\Empty.png" />
+    <Image Include="resources\background.jpg" />
+    <Image Include="resources\coal_power_plant.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="resources\PressStart2P-Regular.ttf" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

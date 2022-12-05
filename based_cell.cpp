@@ -61,6 +61,10 @@ void based_cell::draw_cell(sf::RenderWindow *window)
         cout << "texture error" << endl;
     }
     sprite.setTexture(texture);
-    sprite.setPosition(x, y);
+    int xxx = x - x % 64;
+    int yyy = y - y % 64;
+
+
+    sprite.setPosition(xxx, yyy);
     window->draw(sprite);
 }

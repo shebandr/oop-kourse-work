@@ -1,7 +1,10 @@
 #include "ui.h"
 #include <SFML/Graphics.hpp>
+#include <iostream>
+#include <string> 
+using namespace std;
 
-void ui_draw(sf::RenderWindow* window) {
+void ui_draw(sf::RenderWindow* window, int energy_eu) {
     sf::RectangleShape minimap(sf::Vector2f(160, 160));
     minimap.setFillColor(sf::Color(100, 100, 100));
     minimap.setPosition(0, 640);
@@ -52,4 +55,17 @@ void ui_draw(sf::RenderWindow* window) {
         };
         window->draw(line, 2, sf::Lines);
     }
+    sf::Font font;
+    if (!font.loadFromFile("resources/PressStart2P-Regular.ttf"))
+    {
+        cout << "font error" << endl;
+    }
+    sf::Text energy;
+    energy.setFont(font);
+
+    energy.setString("Energy: "+ to_string(energy_eu));
+    energy.setCharacterSize(20);
+    energy.setFillColor(sf::Color::Black);
+    energy.setPosition(165, 770);
+    window->draw(energy);
 }
