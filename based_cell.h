@@ -13,13 +13,13 @@ class based_cell
 
   public:
     based_cell();
-    int get_id();
-    std::string get_ground();
-    int get_x();
-    int get_y();
-    void set_id(int iidd);
-    void set_ground(std::string gr);
-    void set_x(int xx);
-    void set_y(int yy);
-    void draw_cell(sf::RenderWindow *window);
+    virtual int get_id();
+    virtual std::string get_ground();
+    virtual int get_x();
+    virtual int get_y();
+    virtual void set_id(int iidd);
+    virtual void set_ground(std::string gr);
+    virtual void set_x(int xx);
+    virtual void set_y(int yy);
+    virtual void draw_cell(sf::RenderWindow *window);
 };

@@ -33,6 +33,9 @@
     <ClCompile Include="based_cell.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="coal_station.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="extlibs\bin\x64\sfml-audio-2.dll">
@@ -678,5 +681,24 @@
     <ClInclude Include="based_factory.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="coal_station.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="resources\coal_power_plant.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\grass.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\background.jpg">
+      <Filter>Resource Files</Filter>
+    </Image>
+  </ItemGroup>
+  <ItemGroup>
+    <Font Include="resources\PressStart2P-Regular.ttf">
+      <Filter>Resource Files</Filter>
+    </Font>
   </ItemGroup>
 </Project>

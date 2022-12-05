@@ -3,17 +3,23 @@
 #include <iostream>
 #include "based_cell.h"
 #include "mouse_ui.h"
+#include "based_factory.h"
+#include "coal_station.h"
 using namespace std;
 int picked_category = -1;
 int picked_building = -1;
-void mouse_ui(sf::Vector2i localPosition, based_cell** background_field, int* pc, int* pb, std::string* types_of_ground) {
+void mouse_ui(sf::Vector2i localPosition, based_cell** background_field, int* pc, int* pb, std::string* types_of_ground, based_factory** factory_field) {
 
     int x = localPosition.x;
     int y = localPosition.y;
     if (y <= 640) {
         int x_cell = x / 64;
         int y_cell = y / 64;
-        background_field[x_cell][y_cell].set_ground(types_of_ground[1]);
+        factory_field[x][y] = coal_station();
+        factory_field[x][y].set_x(x);
+        factory_field[x][y].set_y(y);
+        factory_field[x][y].set_empty(0);
+        factory_field[x][y].set_ground(types_of_ground[1]);
     }
     else {
         if (y < 800) {
