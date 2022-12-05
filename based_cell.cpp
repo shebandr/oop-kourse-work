@@ -19,35 +19,44 @@ based_cell::based_cell()
 {
 
 }
-int get_id()
+int based_cell::get_id()
 {
     return id;
 }
-int get_x()
+std::string based_cell::get_ground() {
+    return type_ground;
+}
+
+int based_cell::get_x()
 {
     return x;
 }
-int get_y()
+int based_cell::get_y()
 {
     return y;
 }
 
-void set_id(int iidd)
+void based_cell::set_id(int iidd)
 {
     id = iidd;
 }
-void set_x(int xx)
+
+void based_cell::set_ground(string gr) {
+    type_ground = gr;
+}
+
+void based_cell::set_x(int xx)
 {
     x = xx;
 }
-void set_y(int yy)
+void based_cell::set_y(int yy)
 {
     y = yy;
 }
 
-void draw_cell(sf::RenderWindow *window)
+void based_cell::draw_cell(sf::RenderWindow *window)
 {
-    if (!texture.loadFromFile("resources/grass.png"))
+    if (!texture.loadFromFile(type_ground))
     {
         cout << "texture error" << endl;
     }
