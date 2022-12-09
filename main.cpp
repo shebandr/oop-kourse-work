@@ -53,7 +53,11 @@ int main()
         factory_field[i] = new based_factory[yF];
 
     }
-
+    
+    based_factory** factory_field = new based_factory * [xF];
+    for (int i = 0; i < xF; i++) {
+        factory_field[i] = new based_factory[yF];
+    }
 
 
 

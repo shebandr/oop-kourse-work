@@ -595,9 +595,15 @@ copy /Y "$(SolutionDir)resources"  "$(TargetDir)resources\"</Command>
     <ClInclude Include="ui.h" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Image Include="..\..\..\Pictures\рандомная хуйня\Новая папка\Empty.png" />
     <Image Include="resources\background.jpg" />
     <Image Include="resources\coal_power_plant.png" />
+=======
+    <Image Include="resources\background.jpg" />
+    <Image Include="resources\coal_power_plant.png" />
+    <Image Include="resources\grass.png" />
+>>>>>>> 372e0346db05afee5c87996208d3c79cf37bf836
   </ItemGroup>
   <ItemGroup>
     <Font Include="resources\PressStart2P-Regular.ttf" />

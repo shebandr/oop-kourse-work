@@ -9,7 +9,10 @@ protected:
     int income_eu;
 
 public:
+<<<<<<< HEAD
     coal_station(int ce, int ae, int ie);
+=======
+>>>>>>> 372e0346db05afee5c87996208d3c79cf37bf836
     coal_station();
     int get_capacity_eu();
     int get_amount_eu();

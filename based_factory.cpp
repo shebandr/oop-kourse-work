@@ -5,6 +5,7 @@ int amount;
 int condition;
 int empty = 1;
 based_factory::based_factory() {
+<<<<<<< HEAD
 	type_ground = "resources/Empty.png";
 }
 based_factory::based_factory(int ca, int am, int co, int em) {
@@ -15,6 +16,12 @@ based_factory::based_factory(int ca, int am, int co, int em) {
 }
 
  int based_factory::get_condition() {
+=======
+
+}
+
+int based_factory::get_condition() {
+>>>>>>> 372e0346db05afee5c87996208d3c79cf37bf836
 	return condition;
 }
 

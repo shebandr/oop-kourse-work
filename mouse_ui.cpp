@@ -15,6 +15,7 @@ void mouse_ui(sf::Vector2i localPosition, based_cell** background_field, int* pc
     if (y <= 640) {
         int x_cell = x / 64;
         int y_cell = y / 64;
+<<<<<<< HEAD
         if (&factory_field[x][y] != NULL) {
             factory_field[x_cell][y_cell] = coal_station();
             factory_field[x_cell][y_cell].set_x(x);
@@ -23,6 +24,13 @@ void mouse_ui(sf::Vector2i localPosition, based_cell** background_field, int* pc
             factory_field[x_cell][y_cell].set_ground(types_of_ground[1]);
         }
 
+=======
+        factory_field[x][y] = coal_station();
+        factory_field[x][y].set_x(x);
+        factory_field[x][y].set_y(y);
+        factory_field[x][y].set_empty(0);
+        factory_field[x][y].set_ground(types_of_ground[1]);
+>>>>>>> 372e0346db05afee5c87996208d3c79cf37bf836
     }
     else {
         if (y < 800) {

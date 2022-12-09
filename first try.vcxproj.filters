@@ -689,10 +689,17 @@
     <Image Include="resources\coal_power_plant.png">
       <Filter>Resource Files</Filter>
     </Image>
+<<<<<<< HEAD
     <Image Include="resources\background.jpg">
       <Filter>Resource Files</Filter>
     </Image>
     <Image Include="..\..\..\Pictures\рандомная хуйня\Новая папка\Empty.png">
+=======
+    <Image Include="resources\grass.png">
+      <Filter>Resource Files</Filter>
+    </Image>
+    <Image Include="resources\background.jpg">
+>>>>>>> 372e0346db05afee5c87996208d3c79cf37bf836
       <Filter>Resource Files</Filter>
     </Image>
   </ItemGroup>
